@@ -17,7 +17,7 @@
             --back: #191919;
             --gradient: -webkit-linear-gradient(45deg, var(--dark), var(--light));
 
-            --size: 1000px; /* default: 500 */
+            --size: 500px; /* default: 500 */
             --border-size: calc(var(--size) * 0.064); /* default: 32 @ 500*/
         }
 
@@ -32,8 +32,8 @@
             height: var(--size);
             top: 50%;
             left: 50%;
-            margin-top: calc(var(--size) / 2 * -1);
-            margin-left: calc(var(--size) / 2 * -1);
+            margin-top: calc(var(--size) / 2 * -1); /* default: -250 @ 500 */
+            margin-left: calc(var(--size) / 2 * -1); /* default: -250 @ 500 */
             border-radius: 50%;
             background-color: var(--back);
         }
@@ -52,7 +52,6 @@
 
         .gradient {
             position: absolute;
-            display: inline-flex;
             width: var(--size);
             height: var(--size);
             background: var(--gradient);
@@ -65,17 +64,16 @@
             height: var(--size);
             width: var(--size);
             margin-top: calc(var(--size) * -0.15); /* default: -75 @ 500 */
-            margin-left: calc(var(--size) * 0.0815); /* default: 40.75 @ 500 TODO: fix to be based on size of (container - element)/2 */
-            margin-right: calc(var(--size) * 0.0815); /* default: 40.75 @ 500 TODO: fix to be based on size of (container - element)/2 */
             font-size: calc(var(--size) * 0.9); /* default: 450 @ 500 */
             font-weight: 500;
+            text-align: center;
         }
 
         .bread-scores {
             height: var(--size);
             width: var(--size);
-            margin-top: calc(var(--size) * -0.3); /* default: -150 @ 500 */
-            margin-left: calc(var(--size) * -0.9); /* default: -450 @ 500 */
+            margin-top: calc(var(--size) * -1.2); /* default: -600 @ 500 */
+            margin-left: calc(var(--size) * 0.075); /* default: 37.5 @ 500 */
             font-size: calc(var(--size) * 0.9); /* default: 450 @ 500 */
             font-weight: 300;
             letter-spacing: var(--border-size);

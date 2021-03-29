@@ -16,6 +16,9 @@
 
             --back: #191919;
             --gradient: -webkit-linear-gradient(45deg, var(--dark), var(--light));
+
+            --size: 1000px; /* default: 500 */
+            --border-size: calc(var(--size) * 0.064); /* default: 32 @ 500*/
         }
 
         body {
@@ -25,12 +28,12 @@
 
         .circle {
             position: absolute;
+            width: var(--size);
+            height: var(--size);
             top: 50%;
             left: 50%;
-            width: 500px;
-            height: 500px;
-            margin-top: -250px;
-            margin-left: -250px; /* half width */
+            margin-top: calc(var(--size) / 2 * -1);
+            margin-left: calc(var(--size) / 2 * -1);
             border-radius: 50%;
             background-color: var(--back);
         }
@@ -39,10 +42,10 @@
             position: absolute;
             content: '';
             z-index: -1;
-            top: -32px;
-            left: -32px;
-            width: 564px; /* 500 of circle + 32 + 32 for the borders */
-            height: 564px;
+            top: calc(var(--border-size) * -1);
+            left: calc(var(--border-size) * -1);
+            width: calc(var(--size) + (var(--border-size) * 2));
+            height: calc(var(--size) + (var(--border-size) * 2));
             border-radius: 50%;
             background: var(--gradient);
         }
@@ -50,8 +53,8 @@
         .gradient {
             position: absolute;
             display: inline-flex;
-            width: 100%;
-            height: 100%;
+            width: var(--size);
+            height: var(--size);
             background: var(--gradient);
             background-clip: text;
             -webkit-background-clip: text;
@@ -59,22 +62,23 @@
         }
 
         .chars {
-            height: 500px;
-            width: 500px;
-            margin-top: -75px;
-            margin-left: 41.75px;
-            font-size: 450px;
+            height: var(--size);
+            width: var(--size);
+            margin-top: calc(var(--size) * -0.15); /* default: -75 @ 500 */
+            margin-left: calc(var(--size) * 0.0815); /* default: 40.75 @ 500 TODO: fix to be based on size of (container - element)/2 */
+            margin-right: calc(var(--size) * 0.0815); /* default: 40.75 @ 500 TODO: fix to be based on size of (container - element)/2 */
+            font-size: calc(var(--size) * 0.9); /* default: 450 @ 500 */
             font-weight: 500;
         }
 
         .bread-scores {
-            height: 500px;
-            width: 500px;
-            margin-top: -132px;
-            margin-left: -375px;
-            font-size: 450px;
+            height: var(--size);
+            width: var(--size);
+            margin-top: calc(var(--size) * -0.3); /* default: -150 @ 500 */
+            margin-left: calc(var(--size) * -0.9); /* default: -450 @ 500 */
+            font-size: calc(var(--size) * 0.9); /* default: 450 @ 500 */
             font-weight: 300;
-            letter-spacing: 36px;
+            letter-spacing: var(--border-size);
             transform: rotate(-90deg) scale(1, -1);
         }
     </style>

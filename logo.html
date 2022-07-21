@@ -28,7 +28,8 @@
     }
 
     body {
-      background: var(--background);
+      /* Do not set background when trying to build/capture */
+      /* background: var(--background); */
       font-family: 'Caveat';
     }
 
@@ -62,18 +63,20 @@
     }
 
     .char-gradient {
-      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke-color: var(--dark-green);
       -webkit-text-stroke-width: var(--char-border-size);
       -webkit-user-select: none;
       background: var(--green-gradient);
+      /* required to be after background */
+      -webkit-background-clip: text;
       background-clip: text;
       height: var(--size);
       position: absolute;
       text-align: center;
       user-select: none;
       width: var(--size);
+      border-radius: 50%;
     }
 
     .boldbrad {

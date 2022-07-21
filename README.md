@@ -19,41 +19,42 @@ Open [`logo.html`](logo.html) in your browser!
 - Firefox
 - Chromium
 
-## Build PNG
+## Install Build Dependencies
 
-1. Install dependencies
+Install deps
 
-    ```zsh
-    pnpm install
-    ```
+```zsh
+pnpm install
+```
 
-1. Add `./node_modules/.bin/` to your path (for local capture-website-cli and eslint binaries)
+Add `./node_modules/.bin/` to your path (for local capture-website-cli and eslint binaries)
 
-    ```zsh
-    source .envrc
-    ```
+```zsh
+source .envrc
+```
 
-    Or allow .envrc with [`direnv`](https://github.com/direnv/direnv)
+Or allow .envrc with [`direnv`](https://github.com/direnv/direnv)
 
-    ```zsh
-    direnv allow
-    ```
+```zsh
+direnv allow
+```
 
-1. Build png image
+## Build
 
-    ```zsh
-    capture-website logo.html --delay=5 --no-default-background --output=images/boldandbrad.png
-    ```
+Build `.png` image of default size (500x500 px)
 
-    Or with [`just`](https://github.com/casey/just)
+```zsh
+just build
+```
 
-    ```zsh
-    just build
-    ```
+Build `.png` image of specified size
 
-    > Note: Build will fail to produce output if the target file already exists.
+```zsh
+just px=750 build
+```
 
-Built logos can be found in `images/`!
+> The output image is created at `images/boldandbrad-SIZE.png`.
+> Note that the build will fail if the target file already exists.
 
 ## License
 

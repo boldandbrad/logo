@@ -2,6 +2,7 @@
 	"devDependencies": {
 		"capture-website-cli": "^2.3.0",
 		"eslint": "^7.32.0 || ^8.2.0",
-		"eslint-plugin-html": "^7.0.0"
+		"eslint-plugin-html": "^7.0.0",
+		"just-install": "^1.0.8"
 	}
 }

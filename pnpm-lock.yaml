@@ -4,11 +4,13 @@ specifiers:
   capture-website-cli: ^2.3.0
   eslint: ^7.32.0 || ^8.2.0
   eslint-plugin-html: ^7.0.0
+  just-install: ^1.0.8
 
 devDependencies:
   capture-website-cli: 2.3.0
   eslint: 8.20.0
   eslint-plugin-html: 7.0.0
+  just-install: 1.0.8
 
 packages:
 
@@ -882,6 +884,12 @@ packages:
 
   /json-stable-stringify-without-jsonify/1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
+    dev: true
+
+  /just-install/1.0.8:
+    resolution: {integrity: sha512-m5Y1H2jh9Lhhmtq7Wyo0SMKauVIYN0nif9pRn9ccqNBE6xAxb7cZ4Xe4RUMXcXN9CIV+bKKWjgpHBagNfI1V7g==}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /kind-of/6.0.3:

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <style type="text/css">
+    :root {
+      /* default: 500 - EDIT THIS TO SCALE. */
+      --size: 500px;
+
+      /* default: 25 @ 500 */
+      --border-size: calc(var(--size) * 0.05);
+      /* default: 550 @ 500 */
+      --size-with-borders: calc(var(--size) + (var(--border-size) * 2));
+      /* default: 5 @ 500 */
+      --char-border-size: calc(var(--size) * 0.01);
+
+      /* colors */
+      --dark-green: #3f8756;
+      --light-green: #4bdb69;
+      --green-gradient: -webkit-linear-gradient(45deg, var(--dark-green), var(--light-green));
+      --dark-orange: #fb9628;
+      --light-orange: #fdf97c;
+      --orange-gradient: -webkit-linear-gradient(45deg, var(--dark-orange), var(--light-orange));
+      --background: #191919;
+    }
+
+    body {
+      background: var(--background);
+      font-family: 'Caveat';
+    }
+
+    .center {
+      left: 50%;
+      margin-left: var(--circle-margin);
+      margin-top: var(--circle-margin);
+      top: 50%;
+    }
+
+    .circle {
+      /* default: -275 @ 500 */
+      --circle-margin: calc(var(--size-with-borders) / 2 * -1);
+
+      border-color: var(--dark-green);
+      border-radius: 50%;
+      border-style: solid;
+      border-width: calc(var(--border-size));
+      height: var(--size);
+      position: absolute;
+      width: var(--size);
+    }
+
+    .circle:before {
+      background: var(--orange-gradient);
+      border-radius: 50%;
+      content: '';
+      height: var(--size);
+      position: absolute;
+      width: var(--size);
+    }
+
+    .char-gradient {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-color: var(--dark-green);
+      -webkit-text-stroke-width: var(--char-border-size);
+      -webkit-user-select: none;
+      background: var(--green-gradient);
+      background-clip: text;
+      height: var(--size);
+      position: absolute;
+      text-align: center;
+      user-select: none;
+      width: var(--size);
+    }
+
+    .boldbrad {
+      /* default: -75 @ 500 */
+      --boldbrad-margin: calc(var(--size) * -0.15);
+
+      font-size: var(--size);
+      font-weight: 600;
+      margin-left: var(--boldbrad-margin);
+      margin-top: var(--boldbrad-margin);
+    }
+
+    .and {
+      /* default: 125 @ 500 */
+      --and-font-size: calc(var(--size) * 0.25);
+      /* default: -25 @ 500 */
+      --and-margin-left: calc(var(--size) * -0.05);
+      /* default: -475 @ 500 */
+      --and-margin-top: calc(var(--size) * -0.95);
+
+      font-size: var(--and-font-size);
+      font-weight: 700;
+      margin-left: var(--and-margin-left);
+      margin-top: var(--and-margin-top);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle center">
+    <div class="char-gradient">
+      <div class="boldbrad">bb</div>
+      <div class="and">&</div>
+    </div>
+  </div>
+</body>

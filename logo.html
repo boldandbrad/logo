@@ -10,12 +10,24 @@
       /* default: 500 - EDIT THIS TO SCALE. */
       --size: 500px;
 
-      /* default: 25 @ 500 */
-      --border-size: calc(var(--size) * 0.05);
-      /* default: 550 @ 500 */
-      --size-with-borders: calc(var(--size) + (var(--border-size) * 2));
-      /* default: 5 @ 500 */
-      --char-border-size: calc(var(--size) * 0.01);
+      /* adjust circle size so that total size with borders is correct */
+      /* 500 @ 550 */
+      --circle-size: calc(var(--size) * 0.9091);
+      /* -275 @ 550 */
+      --circle-margin: calc(var(--size) / 2 * -1);
+
+      /* 25 @ 550 */
+      --circle-border-size: calc(var(--circle-size) * 0.05);
+      /* 5 @ 550 */
+      --char-border-size: calc(var(--circle-size) * 0.01);
+      /* -75 @ 550 */
+      --boldbrad-margin: calc(var(--circle-size) * -0.15);
+      /* 125 @ 550 */
+      --and-font-size: calc(var(--circle-size) * 0.25);
+      /* -25 @ 550 */
+      --and-margin-left: calc(var(--circle-size) * -0.05);
+      /* -475 @ 550 */
+      --and-margin-top: calc(var(--circle-size) * -0.95);
 
       /* colors */
       --dark-green: #3f8756;
@@ -24,13 +36,6 @@
       --dark-orange: #fb9628;
       --light-orange: #fdf97c;
       --orange-gradient: -webkit-linear-gradient(45deg, var(--dark-orange), var(--light-orange));
-      --background: #191919;
-    }
-
-    body {
-      /* Do not set background when trying to build/capture */
-      /* background: var(--background); */
-      font-family: 'Caveat';
     }
 
     .center {
@@ -41,25 +46,23 @@
     }
 
     .circle {
-      /* default: -275 @ 500 */
-      --circle-margin: calc(var(--size-with-borders) / 2 * -1);
-
       border-color: var(--dark-green);
       border-radius: 50%;
       border-style: solid;
-      border-width: calc(var(--border-size));
-      height: var(--size);
+      border-width: calc(var(--circle-border-size));
+      font-family: 'Caveat';
+      height: var(--circle-size);
       position: absolute;
-      width: var(--size);
+      width: var(--circle-size);
     }
 
     .circle:before {
       background: var(--orange-gradient);
       border-radius: 50%;
       content: '';
-      height: var(--size);
+      height: var(--circle-size);
       position: absolute;
-      width: var(--size);
+      width: var(--circle-size);
     }
 
     .char-gradient {
@@ -71,32 +74,22 @@
       /* required to be after background */
       -webkit-background-clip: text;
       background-clip: text;
-      height: var(--size);
+      height: var(--circle-size);
       position: absolute;
       text-align: center;
       user-select: none;
-      width: var(--size);
+      width: var(--circle-size);
       border-radius: 50%;
     }
 
     .boldbrad {
-      /* default: -75 @ 500 */
-      --boldbrad-margin: calc(var(--size) * -0.15);
-
-      font-size: var(--size);
+      font-size: var(--circle-size);
       font-weight: 600;
       margin-left: var(--boldbrad-margin);
       margin-top: var(--boldbrad-margin);
     }
 
     .and {
-      /* default: 125 @ 500 */
-      --and-font-size: calc(var(--size) * 0.25);
-      /* default: -25 @ 500 */
-      --and-margin-left: calc(var(--size) * -0.05);
-      /* default: -475 @ 500 */
-      --and-margin-top: calc(var(--size) * -0.95);
-
       font-size: var(--and-font-size);
       font-weight: 700;
       margin-left: var(--and-margin-left);

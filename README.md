@@ -11,7 +11,7 @@ tools.
 
 Intended to be used as my profile image across socials, to create consistent
 branding across my various projects, and to serve as an example for others.
-Please read the [LICENSE](#license) section below for acceptable use guidelines.
+Please read the [License](#license) section below for acceptable use guidelines.
 
 ## Run
 
@@ -58,7 +58,7 @@ just px=750 build
 
 ## Attributions
 
-The boldandbrad logo currently uses the [Caveat](https://fonts.google.com/specimen/Caveat)
+The `boldandbrad` logo currently uses the [Caveat](https://fonts.google.com/specimen/Caveat)
 Typeface designed by [Impallari Type](https://twitter.com/impallaritypeprovided)
 and provided by Google Fonts. Caveat is licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl).
 

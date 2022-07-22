@@ -5,19 +5,19 @@
 
 # boldandbrad logo
 
-The official `boldandbrad` logo written entirely in html and css!
+The official `boldandbrad` logo written entirely in html and css! Why css, you
+ask? Mainly because I have no experience whatsoever with modern graphic design
+tools.
 
-Intended to be used as my profile image across socials and dev related accounts.
+Intended to be used as my profile image across socials, to create consistent
+branding across my various projects, and to serve as an example for others.
+Please read the [LICENSE](#license) section below for acceptable use guidelines.
 
 ## Run
 
 Open [`logo.html`](logo.html) in your browser!
 
-### Compatibility
-
-- Safari
-- Firefox
-- Chromium
+> The logo has been tested in Safari, Firefox, and Chromium.
 
 ## Install Build Dependencies
 
@@ -56,6 +56,24 @@ just px=750 build
 > The output image is created at `images/boldandbrad-SIZE.png`.
 > Note that the build will fail if the target file already exists.
 
+## Attributions
+
+The boldandbrad logo currently uses the [Caveat](https://fonts.google.com/specimen/Caveat)
+Typeface designed by [Impallari Type](https://twitter.com/impallaritypeprovided)
+and provided by Google Fonts. Caveat is licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=ofl).
+
 ## License
 
-> Coming soon.
+Copyright (c) 2022 Bradley Wojcik
+
+No explicit license is provided for the contents of this repository. The
+contained code and derived images are intended for personal use by me (Bradley
+Wojcik) only. Any additional acceptable terms of use are described below. I
+reserve the right to update these terms as I make changes to the contents of
+this repository. No contributions will be accepted.
+
+You may use the images in this repo to attribute me or any one of my projects
+only. When doing so, please include a link to either my github profile, twitter
+profile, or this repo.
+
+For any other uses, please seek express permission from me first.

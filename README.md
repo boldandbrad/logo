@@ -33,7 +33,7 @@ Add `./node_modules/.bin/` to your path (for local capture-website-cli and eslin
 source .envrc
 ```
 
-Or allow .envrc with [`direnv`](https://github.com/direnv/direnv)
+Or allow `.envrc` with [`direnv`](https://github.com/direnv/direnv)
 
 ```zsh
 direnv allow

@@ -1,8 +1,10 @@
 {
-	"devDependencies": {
-		"capture-website-cli": "^2.3.0",
-		"eslint": "^7.32.0 || ^8.2.0",
-		"eslint-plugin-html": "^7.0.0",
-		"just-install": "^1.0.8"
-	}
+  "name": "boldandbrad-logo",
+  "version": "0.1.0",
+  "devDependencies": {
+    "capture-website-cli": "^3.0.1",
+    "eslint": "^8.50.0",
+    "eslint-plugin-html": "^7.1.0",
+    "puppeteer": "^21.3.6"
+  }
 }

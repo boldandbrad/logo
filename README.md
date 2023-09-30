@@ -7,7 +7,7 @@
 
 The official `boldandbrad` logo written entirely in html and css! Why css, you
 ask? Mainly because I have no experience whatsoever with modern graphic design
-tools.
+tools 😅.
 
 Intended to be used as my profile image across socials, to create consistent
 branding across my various projects, and to serve as an example for others.
@@ -24,7 +24,7 @@ Open [`logo.html`](logo.html) in your browser!
 Install deps
 
 ```zsh
-pnpm install
+npm install
 ```
 
 Add `./node_modules/.bin/` to your path (for local capture-website-cli and eslint binaries)
@@ -73,7 +73,7 @@ reserve the right to update these terms as I make changes to the contents of
 this repository. No contributions will be accepted.
 
 You may use the images in this repo to attribute me or any one of my projects
-only. When doing so, please include a link to either my github profile, twitter
-profile, or this repo.
+only. When doing so, please include a link to either my github profile, or this
+repo.
 
 For any other uses, please seek express permission from me first.
